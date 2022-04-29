@@ -1,6 +1,6 @@
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import items from "./data/items";
-import "./App.css";
+import Item from "./components/Item";
+import "./css/App.css";
 
 function App() {
   return (
@@ -48,24 +48,7 @@ function App() {
         </section>
 
         <section className="main-items">
-          <ul className="main-items__items">
-            <li className="main-items__item">
-              <img src={items[0].src} />
-              <h3>{items[0].name}</h3>
-              <p>{items[0].description}</p>
-            </li>
-            <li className="main-items__item">
-              <img src={items[1].src} />
-              <h3>{items[1].name}</h3>
-              <p>{items[1].description}</p>
-            </li>
-            <li className="main-items__item">
-              <img src={items[2].src} />
-              <h3>{items[2].name}</h3>
-              <p>{items[2].description}</p>
-              <p>{items[2].price}</p>
-            </li>
-          </ul>
+          <Item />
         </section>
       </main>
     </div>

@@ -18,6 +18,13 @@ const items = [
     description: "You can be the sexy king at the gym for sure",
     price: "49,900원",
   },
+  {
+    id: 3,
+    name: "pink shorts",
+    src: "https://image.nbkorea.com/NBRB_Product/20220405/NB20220405164948169001.jpg",
+    description: "blah balsdgiha",
+    price: "79,900원",
+  },
 ];
 
 export default items;
