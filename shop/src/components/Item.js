@@ -1,4 +1,5 @@
 import items from "../data/items";
+import { Link } from "react-router-dom";
 
 function Item() {
   return (
@@ -6,10 +7,15 @@ function Item() {
       {items.map((item, i) => {
         return (
           <li key={i} className="main-items__item">
-            <img alt={item.name} src={item.src} />
+            <div className="main-items__image-container">
+              <Link to="/detail">
+                <img alt={item.name} src={item.src} />
+              </Link>
+            </div>
             <div className="main-items__text">
               <h3>{item.name}</h3>
-              <p>{item.description}</p>
+              <p className="main-items__description">{item.description}</p>
+              <p>{item.price}</p>
             </div>
           </li>
         );

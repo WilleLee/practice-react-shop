@@ -4,6 +4,7 @@ const items = [
     name: "cute blue shorts",
     src: "https://image.nbkorea.com/NBRB_Product/20220425/NB20220425093036961001.jpg",
     description: "You will be very cute with these amazing shorts",
+    price: "59,900원",
   },
   {
     id: 1,

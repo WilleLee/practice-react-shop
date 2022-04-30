@@ -1,5 +1,6 @@
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import Main from "./screens/Main";
+import Main from "./routes/Main";
+import DetailScreen from "./routes/DetailScreen";
 import "./css/App.css";
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -7,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Navbar bg="light" expand="lg" variant="light" className="nav">
-        <Container>
+        <Container className="nav-container">
           <Navbar.Brand href="#home" className="nav__title">
             Wille World
           </Navbar.Brand>
@@ -39,7 +40,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/detail" element={<div>detailed pages</div>} />
+        <Route path="/detail" element={<DetailScreen />} />
         <Route path="/about" element={<div>about pages</div>} />
       </Routes>
     </div>

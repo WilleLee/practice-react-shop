@@ -1,8 +1,11 @@
 @import "reset.css";
+/*screens*/
+@import "screens/detail-screen.css";
 /*components*/
 @import "components/main-banner.css";
 @import "components/main-items.css";
 @import "components/nav.css";
+@import "components/detail.css";
 
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
