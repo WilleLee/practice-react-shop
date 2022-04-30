@@ -1,6 +1,7 @@
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import Item from "./components/Item";
+import Main from "./screens/Main";
 import "./css/App.css";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
           />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Shop</Nav.Link>
+              <Nav.Link>Home</Nav.Link>
+              <Nav.Link>Shop</Nav.Link>
               <NavDropdown title="more infos" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
@@ -36,21 +37,11 @@ function App() {
         </Container>
       </Navbar>
 
-      <main>
-        <section className="main-banner">
-          <a href="/home">
-            <img
-              alt=""
-              className="main-banner__img"
-              src="https://image.nbkorea.com/NBRB_Site/20220426/NB20220426162348127001.jpg"
-            />
-          </a>
-        </section>
-
-        <section className="main-items">
-          <Item />
-        </section>
-      </main>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/detail" element={<div>detailed pages</div>} />
+        <Route path="/about" element={<div>about pages</div>} />
+      </Routes>
     </div>
   );
 }

@@ -7,8 +7,10 @@ function Item() {
         return (
           <li key={i} className="main-items__item">
             <img alt={item.name} src={item.src} />
-            <h3>{item.name}</h3>
-            <p>{item.description}</p>
+            <div className="main-items__text">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+            </div>
           </li>
         );
       })}
