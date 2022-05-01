@@ -1,12 +1,14 @@
 .nav {
   height: 70px;
+  z-index: 1;
 }
 .nav-container {
   background-color: #f8f9fa;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.nav__title {
+.nav__title h1 {
   font-size: 22px;
   font-weight: 800;
+  background-color: inherit;
 }

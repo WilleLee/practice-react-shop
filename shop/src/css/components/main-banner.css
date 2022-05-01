@@ -1,5 +1,6 @@
 .main-banner {
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .main-banner__img {
   width: 100%;

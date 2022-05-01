@@ -1,16 +1,25 @@
 import items from "../data/items";
+import { useParams } from "react-router-dom";
 
 function Detail() {
+  const { id } = useParams();
+  const thisItem = items.find((item) => item.id == id);
   return (
     <section className="detail">
-      <div className="detail__image-container">
-        <img src={items[0].src} />
-      </div>
-      <div className="detail__text">
-        <h3>{items[0].name}</h3>
-        <p className="detail__description">{items[0].description}</p>
-        <p className="detail__price">{items[0].price}</p>
-      </div>
+      {thisItem ? (
+        <>
+          <div className="detail__image-container">
+            <img src={thisItem.src} />
+          </div>
+          <div className="detail__text">
+            <h3>{thisItem.name}</h3>
+            <p className="detail__description">{thisItem.description}</p>
+            <p className="detail__price">{thisItem.price}</p>
+          </div>
+        </>
+      ) : (
+        <>go away</>
+      )}
     </section>
   );
 }

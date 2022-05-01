@@ -17,3 +17,11 @@ body {
   width: 100%;
   padding-bottom: 20px;
 }
+a,
+a:focus,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}

@@ -4,13 +4,9 @@ import Item from "../components/Item";
 function Main() {
   return (
     <main className="main-screen">
-      <section className="main-banner">
-        <MainBanner />
-      </section>
+      <MainBanner />
 
-      <section className="main-items">
-        <Item />
-      </section>
+      <Item />
     </main>
   );
 }
