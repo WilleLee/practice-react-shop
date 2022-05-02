@@ -1,8 +1,12 @@
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
+/*routes*/
 import Main from "./routes/Main";
 import DetailScreen from "./routes/DetailScreen";
+/*data*/
+import links from "./data/links";
+/*css*/
 import "./css/App.css";
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
 function App() {
   const navigate = useNavigate();
@@ -11,7 +15,7 @@ function App() {
       <Navbar bg="light" expand="lg" variant="light" className="nav">
         <Container className="nav-container">
           <Navbar.Brand className="nav__title">
-            <Link to="/">
+            <Link to={links["home"]}>
               <h1>Wille World</h1>
             </Link>
           </Navbar.Brand>
@@ -23,14 +27,14 @@ function App() {
             <Nav className="me-auto">
               <Nav.Link
                 onClick={() => {
-                  navigate("/");
+                  navigate(links["home"]);
                 }}
               >
                 Home
               </Nav.Link>
               <Nav.Link
                 onClick={() => {
-                  navigate("/detail/0");
+                  navigate(links["detail"] + "0");
                 }}
               >
                 Shop
@@ -58,8 +62,8 @@ function App() {
       </Navbar>
 
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/detail/:id" element={<DetailScreen />} />
+        <Route path={links["home"]} element={<Main />} />
+        <Route path={links["detail"] + ":id"} element={<DetailScreen />} />
       </Routes>
     </div>
   );

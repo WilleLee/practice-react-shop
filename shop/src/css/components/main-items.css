@@ -53,6 +53,10 @@
 }
 .main-items__description {
   margin-bottom: 10px;
+  opacity: 0.8;
+}
+.main-items__price {
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1200px) {

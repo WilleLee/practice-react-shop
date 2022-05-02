@@ -11,6 +11,7 @@ const items = [
     name: "black NBSC shorts",
     src: "https://image.nbkorea.com/NBRB_Product/20220425/NB20220425092256938001.jpg",
     description: "The best choice to follow common cuteness",
+    price: "59,900원",
   },
   {
     id: 2,
