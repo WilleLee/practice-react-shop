@@ -23,14 +23,16 @@ function Detail() {
         <div className="alert alert-warning">Qhsdgihasglihl</div>
       ) : null}
       {thisItem ? (
-        <>
+        <div className="detail__container">
           <div className="detail__image-container">
             <img src={thisItem.src} />
           </div>
-          <div className="detail__text">
-            <h3>{thisItem.name}</h3>
-            <p className="detail__description">{thisItem.description}</p>
-            <p className="detail__price">{thisItem.price}</p>
+          <div className="detail__info">
+            <div className="detail__text">
+              <h3>{thisItem.name}</h3>
+              <p className="detail__description">{thisItem.description}</p>
+              <p className="detail__price">{thisItem.price}</p>
+            </div>
 
             <form className="detail__form">
               <div className="detail__inputs">
@@ -52,7 +54,7 @@ function Detail() {
               </div>
             </form>
           </div>
-        </>
+        </div>
       ) : (
         <>go away</>
       )}

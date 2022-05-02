@@ -53,7 +53,7 @@
 }
 .main-items__description {
   margin-bottom: 10px;
-  opacity: 0.8;
+  color: var(--font-color-description);
 }
 .main-items__price {
   font-weight: 500;
