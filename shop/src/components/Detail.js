@@ -20,12 +20,14 @@ function Detail() {
   return (
     <section className="detail">
       {warning ? (
-        <div className="alert alert-warning">Qhsdgihasglihl</div>
+        <div className="alert alert-warning">event notification</div>
       ) : null}
       {thisItem ? (
         <div className="detail__container">
           <div className="detail__image-container">
-            <img src={thisItem.src} />
+            <a href={thisItem.nbLink} target="_blank">
+              <img src={thisItem.src} />
+            </a>
           </div>
           <div className="detail__info">
             <div className="detail__text">
