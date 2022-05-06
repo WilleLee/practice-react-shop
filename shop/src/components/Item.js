@@ -1,12 +1,11 @@
-import items from "../data/items";
 import { Link } from "react-router-dom";
 import links from "../data/links";
 
-function Item() {
+function Item({ itemsList }) {
   return (
     <section className="main-items">
       <ul className="main-items__items">
-        {items.map((item, i) => {
+        {itemsList.map((item, i) => {
           return (
             <li key={i} className="main-items__item">
               <div className="main-items__image-container">

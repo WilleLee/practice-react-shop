@@ -5,6 +5,7 @@ import Main from "./routes/Main";
 import DetailScreen from "./routes/DetailScreen";
 /*data*/
 import links from "./data/links";
+import items from "./data/items";
 /*css*/
 import "./css/App.css";
 
